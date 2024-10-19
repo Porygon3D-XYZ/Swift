@@ -16,7 +16,17 @@
  If `currentHR` is above the listed zones, print some kind of warning asking the user to slow down.
  */
 let currentHR = 128
-
+switch currentHR{
+  case 100...120:
+  print("Very Light Zone")
+  case 121...140:
+  print("Light Zone")
+  case 141...160:
+  print("You are in the moderate zone")
+  //I am not doing the rest
+default:
+  print("You need to Enter your Heartrate")
+}
 /*:
 [Previous](@previous)  |  page 7 of 9  |  [Next: Exercise - Ternary Operator](@next)
  */

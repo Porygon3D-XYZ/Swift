@@ -10,7 +10,17 @@
 let targetLowerBound = 120
 let targetUpperBound = 150
 let currentHR = 147
+let isInTarget = 145
+let isBelowTarget = 130
+let isAboveTarget = 155
 
+if(currentHR > isInTarget && currentHR < targetUpperBound){
+  print("you are on target keep this pace!")
+} else if(currentHR > isAboveTarget) {
+  print("Slow it down a bit.")
+} else if(currentHR < isBelowTarget) {
+  print("Pick up the pace a little. ")
+}
 /*:
 [Previous](@previous)  |  page 5 of 9  |  [Next: Exercise - Switch Statements](@next)
  */
