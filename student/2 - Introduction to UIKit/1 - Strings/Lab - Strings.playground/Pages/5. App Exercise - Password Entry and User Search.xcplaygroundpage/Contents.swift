@@ -9,6 +9,11 @@ let storedUserName = "TheFittest11"
 let storedPassword = "a8H1LuK91"
 let enteredUserName = "thefittest11"
 let enteredPassword: String = "a8H1Luk9"
+if (enteredPassword == storedPassword) {
+  print("Logged in!")
+} else {
+  print("You need to try again")
+}
 
 
 /*:
@@ -19,7 +24,10 @@ let enteredPassword: String = "a8H1Luk9"
 import Foundation
 let userName = "StepChallenger"
 let searchName = "step"
-
+if(userName.lowercased().contains(searchName.lowercased()))
+  {
+  print("\(userName)")
+  }
 
 /*:
  _Copyright © 2023 Apple Inc._
