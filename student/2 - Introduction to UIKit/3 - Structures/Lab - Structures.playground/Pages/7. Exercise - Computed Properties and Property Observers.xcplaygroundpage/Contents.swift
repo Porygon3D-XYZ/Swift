@@ -20,9 +20,17 @@ Rec.area
  Create an instance of `Height` and then change one of its properties. Print out the other property to ensure that it was adjusted accordingly.
  */
 struct Height {
-    var heightInInches: Double
+  var heightInInches: Double {
+    willSet {
+      print("Value is about to change to \(newValue)")
+    }
+  }
     
-    var heightInCentimeters: Double
+  var heightInCentimeters: Double {
+    didSet {
+      print("Value has changed from \(oldValue)")
+    }
+  }
     
     init(heightInInches: Double) {
         self.heightInInches = heightInInches
@@ -35,7 +43,8 @@ struct Height {
     }
 }
 
-
+var newHeight = Height(heightInCentimeters: 12.21)
+newHeight.heightInCentimeters = 12.12
 
 /*:
 [Previous](@previous)  |  page 7 of 10  |  [Next: App Exercise - Mile Times and Congratulations](@next)
